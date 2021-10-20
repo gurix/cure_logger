@@ -1,0 +1,6 @@
+# Server address of the mqtt broker
+mqtt_server: mqtt://192.168.178.48
+
+sensors:
+  zigbee2mqtt/0x00158d00073a7ba8:
+    name: Test Sensor
