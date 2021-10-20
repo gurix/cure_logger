@@ -1,7 +1,7 @@
 # Cure logger
 The aim of this project is to monitor the curing of cannabis flowers using the Aqara humidity, pressure and temperature sensor (WSDCGQ11LM).
 
-The ruby script subscribes topic of the sensors and when and saves the payload in a CSV file for further analysis.
+The ruby script subscribes topic of the sensors and saves the events payload in a CSV file for further analysis.
 
 # Requirements
 - MQTT Broker handles the events from Zigbee2mqtt
