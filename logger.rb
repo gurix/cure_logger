@@ -8,9 +8,6 @@ require 'yaml'
 
 config  = YAML.load_file('config.yaml')
 
-# MQTT Server configuration
-SERVER = '192.168.178.48'
-
 # Sensor configuration
 sensors_config = config['sensors']
 
