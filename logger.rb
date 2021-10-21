@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'mqtt'
 require 'json'
-require 'CSV'
+require 'csv'
 require 'yaml'
 
 config  = YAML.load_file('config.yaml')
