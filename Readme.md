@@ -12,7 +12,8 @@ The ruby script subscribes topic of the sensors and saves the events payload in 
 # Installation
 1. Clone the ropository `git clone https://github.com/gurix/cure_logger.git`
 2. Install dependencies `bundle install`
-3. Setup your sensors and configure address of your MQTT broker in `config.yaml`
+3. `cp config.yaml.example config.yaml`
+4. Setup your sensors and configure address of your MQTT broker in `config.yaml`
 
 # Run the script
 Start the script with `ruby logger.rb` that produces console output when an event happens as well as it logs data into `data.csv`.
