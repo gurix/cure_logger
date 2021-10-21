@@ -24,7 +24,7 @@ MQTT::Client.connect(config['mqtt_server']) do |client|
       payload = JSON.parse(message)
 
       # Log payload in a csv file
-      CSV.open('data.csv', 'wb+') do |csv|
+      CSV.open('data.csv', 'ab') do |csv|
         csv << [Time.now,
                 sensor["name"],
                 topic,
