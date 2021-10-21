@@ -3,10 +3,11 @@ The aim of this project is to monitor the curing of cannabis flowers using the A
 
 The ruby script subscribes topic of the sensors and saves the events payload in a CSV file for further analysis.
 
+![Harware](hardware.jpeg)
+
 # Requirements
 - MQTT Broker handles the events from Zigbee2mqtt
 - Ruby 2.7 or better
-
 
 # Installation
 1. Clone the ropository `git clone https://github.com/gurix/cure_logger.git`
