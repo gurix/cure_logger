@@ -23,3 +23,11 @@ p_temperature <- ggplot(df, aes(x=date, y=temperature, group=name, color=name)) 
 p_temperature
 ```
 
+
+## Last 30 rows
+```{r}
+most_recent <- tail(df, n=30)
+most_recent <- most_recent[order(rev(most_recent$date)),]
+
+knitr::kable(most_recent, row.names = F)
+```
