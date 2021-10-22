@@ -1,0 +1,25 @@
+---
+title: "Report"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+df <- read.csv("../data.csv", header = F)
+colnames(df) <- c("date", "name", "topic", "humidity", "temperature", "presure", "battery", "voltage", "linkquality")
+df$date <- as.POSIXct(df$date)
+```
+
+## Humidity
+```{r}
+p_humidity <- ggplot(df, aes(x=date, y=humidity, group=name, color=name)) + geom_line()
+p_humidity
+```
+
+## Temperature
+```{r}
+p_temperature <- ggplot(df, aes(x=date, y=temperature, group=name, color=name)) + geom_line()
+p_temperature
+```
+
