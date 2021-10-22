@@ -11,6 +11,10 @@ colnames(df) <- c("date", "name", "topic", "humidity", "temperature", "presure",
 df$date <- as.POSIXct(df$date)
 ```
 
+```{r echo=FALSE}
+Sys.time()
+```
+
 ## Humidity
 ```{r}
 p_humidity <- ggplot(df, aes(x=date, y=humidity, group=name, color=name)) + geom_line()
