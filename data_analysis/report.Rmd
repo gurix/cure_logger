@@ -6,13 +6,20 @@ output: html_document
 ```{r setup, include=FALSE}
 library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
+
 df <- read.csv("../data.csv", header = F)
 colnames(df) <- c("date", "name", "topic", "humidity", "temperature", "presure", "battery", "voltage", "linkquality")
+
 df$date <- as.POSIXct(df$date)
+
+now <- Sys.time()
+cut_off <- now - (2*60*60*24)
+df <- subset(df, date > cut_off)
 ```
 
 ```{r echo=FALSE}
-Sys.time()
+now
+cut_off
 ```
 
 ## Humidity
